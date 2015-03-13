@@ -9,11 +9,11 @@ var districtNames = function(districts){
     }).join(',');
 };
 
-fs.readFile(__dirname + '/' + config.geoJSONFileName, 'utf8', function(err, districtFeatures) {
+fs.readFile(__dirname + '/' + config.inputFilePath, 'utf8', function(err, districtFeatures) {
     if (err) {
         return console.log(err);
     }
-    fs.writeFile('./district_names.json', districtNames(districtFeatures), function(err) {
+    fs.writeFile(config.outFilePath, districtNames(districtFeatures), function(err) {
         if(err) {
             console.log(err);
         }
