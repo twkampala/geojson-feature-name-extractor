@@ -1,5 +1,5 @@
 {
     "districtNameLocator": "District",
-    "inputFilePath": "./rwanda_districts.geojson",
+    "inputFilePath": "/rwanda_districts.geojson",
     "outFilePath": "./district_names.json"
 }

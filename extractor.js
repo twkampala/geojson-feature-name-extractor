@@ -4,9 +4,11 @@ var fs = require('fs');
 var config = require('./config.js');
 
 var districtNames = function(districts){
-    return JSON.parse(districts).features.map(function(feature){
+    var names = JSON.parse(districts).features.map(function(feature){
         return feature.properties[config.districtNameLocator];
-    }).join(',');
+    });
+
+    return JSON.stringify(names);
 };
 
 fs.readFile(__dirname + '/' + config.inputFilePath, 'utf8', function(err, districtFeatures) {
