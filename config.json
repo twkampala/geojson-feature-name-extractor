@@ -1,3 +1,4 @@
 {
-    "geoJSONFileName": "rwanda_districts.geojson"
+    "geoJSONFileName": "rwanda_districts.geojson",
+    "districtNameLocator": "District"
 }
